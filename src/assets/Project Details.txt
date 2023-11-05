@@ -1,0 +1,8 @@
+Installed packages 
+
+1. Tailwind css
+2. Flowbite - updated version of Tailwind(To get the code of carousel)
+3. Bootstrap - https://ng-bootstrap.github.io/#/components/carousel/examples -->(for carousel)
+
+
+Need to learn routing

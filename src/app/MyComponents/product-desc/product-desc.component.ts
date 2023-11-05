@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StoreService } from 'src/app/Services/store.service';
 
 @Component({
@@ -11,7 +11,9 @@ export class ProductDescComponent implements OnInit{
 
   productIDReceived:any;
   productDesc:any;
-  constructor(private activatedRoute : ActivatedRoute, private productDetail : StoreService){}
+  favorite: boolean= false;
+  cart: number = 0;
+  constructor(private activatedRoute : ActivatedRoute, private productDetail : StoreService, private route: Router){}
 
 
   ngOnInit():void{
@@ -23,6 +25,23 @@ export class ProductDescComponent implements OnInit{
       console.log("constructor",data)
     })
   }
+
+  checkRating(rate : number){
+    return rate >= 5
+  }
+
+  toggleFavorite(){
+    this.favorite = !this.favorite;
+    // console.log(value.target.value)
+  }
+
+  updateCart(doNavigate: boolean){
+    if(doNavigate){
+      this.route.navigateByUrl('cart')
+    }
+    this.cart === 0 ? this.cart++ : this.cart--; 
+  }
+
 
 
 
