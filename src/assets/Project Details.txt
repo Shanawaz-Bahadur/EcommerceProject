@@ -6,3 +6,4 @@ Installed packages
 
 
 Need to learn routing
+Added carousel, routerLinkActive,  inr pipes, cart, home page, Installed flowbite, bootstrap for css
