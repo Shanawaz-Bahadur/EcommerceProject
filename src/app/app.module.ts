@@ -7,7 +7,11 @@ import { NavbarComponent } from './MyComponents/navbar/navbar.component';
 import { StoreComponent } from './MyComponents/store/store.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDescComponent } from './MyComponents/product-desc/product-desc.component';
-import { HomeComponent } from './MyComponents/home/home.component'
+import { HomeComponent } from './MyComponents/home/home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { FormsModule } from '@angular/forms';
+import { UsdToInrPipe } from './Pipes/usd-to-inr.pipe';
+import { CartComponent } from './MyComponents/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,16 @@ import { HomeComponent } from './MyComponents/home/home.component'
     NavbarComponent,
     StoreComponent,
     ProductDescComponent,
-    HomeComponent
+    HomeComponent,
+    UsdToInrPipe,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
